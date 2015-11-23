@@ -2,19 +2,20 @@ import morepath
 import waitress
 from werkzeug.serving import run_simple
 
-import app, root
+import main
+# import root
 
 def prod():
     morepath.autosetup()
-    waitress.serve(app.App())
+    waitress.serve(main.App())
 
 def dev():
     config = morepath.setup()
-    config.scan(app)
-    config.scan(root)
+    config.scan(main)
+    # config.scan(root)
     config.commit()
 
-    run_simple('localhost', 8080, app.App(), use_reloader=True, use_debugger=True)
+    run_simple('localhost', 8080, main.App(), use_reloader=True, use_debugger=True)
 
 if __name__ == '__main__':
     dev()

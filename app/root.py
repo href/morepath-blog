@@ -1,4 +1,4 @@
-from app import App
+from main import App
 
 @App.path(path='')
 class Root(object):

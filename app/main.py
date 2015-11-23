@@ -12,3 +12,4 @@ def get_template_directory():
 def get_setting_section():
     return {'debug': True}
 
+
