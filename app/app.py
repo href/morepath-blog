@@ -11,3 +11,4 @@ def get_template_directory():
 @App.setting_section(section='chameleon')
 def get_setting_section():
     return {'debug': True}
+
