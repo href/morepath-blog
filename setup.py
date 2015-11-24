@@ -13,8 +13,8 @@ setup(name='blog',
       ],
       entry_points= {
         'console_scripts': [
-            'morepath-blog = app.main:prod',
-            'moreblog-dev = app.main:dev',
+            'morepath-blog = blog.main:prod',
+            'moreblog-dev = blog.main:dev',
           ]
       }
 )
