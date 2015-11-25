@@ -10,8 +10,6 @@ def prod():
 
 def dev():
     morepath.autosetup()
-    waitress.serve(app.App())
-
     run_simple('localhost', 8080, app.App(), use_reloader=True, use_debugger=True)
 
 if __name__ == '__main__':
